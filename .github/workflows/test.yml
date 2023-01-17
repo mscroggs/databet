@@ -18,10 +18,10 @@ jobs:
         with:
           python-version: "3.11"
       - uses: actions/checkout@v3
-      - run: python3 -m pip install matplotlib flake8 pytest
+      - run: python3 -m pip install matplotlib flake8 pytest numpy
       - run: python3 -m flake8 .
         name: Run flake8
       - run: python3 -m pytest test
         name: Run tests
-      - run: python3 make_plots.py
+      - run: python3 make_pngs.py
         name: Make pngs
