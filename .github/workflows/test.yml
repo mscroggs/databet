@@ -23,5 +23,7 @@ jobs:
         name: Run flake8
       - run: python3 -m pytest test
         name: Run tests
-      - run: python3 make_pngs.py
-        name: Make pngs
+      - run: |
+          python3 make_pngs.py
+          python3 make_readme_png.py
+        name: Run scripts
