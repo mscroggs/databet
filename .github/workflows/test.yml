@@ -1,0 +1,27 @@
+name: 🧪 Test
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-tests:
+    name: Run tests
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - uses: actions/checkout@v3
+      - run: python3 -m pip install matplotlib
+      - run: python3 -m flake8 .
+        name: Run flake8
+      - run: python3 -m pytest test
+        name: Run tests
+      - run: python3 make_plots.py
+        name: Make pngs
