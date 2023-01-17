@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: "3.11"
       - uses: actions/checkout@v3
-      - run: python3 -m pip install matplotlib
+      - run: python3 -m pip install matplotlib flake8 pytest
       - run: python3 -m flake8 .
         name: Run flake8
       - run: python3 -m pytest test
