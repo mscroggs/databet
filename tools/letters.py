@@ -1,6 +1,6 @@
-import os
 import json
 import numpy as np
+import os
 
 letter_dir = os.path.join(
     os.path.join(
@@ -10,5 +10,9 @@ letter_dir = os.path.join(
 
 
 def load_letter(letter):
-    with open(os.path.join(letter_dir, f"{letter}.json")) as f:
+    letter_file = os.path.join(letter_dir, f"{letter.upper()}.json")
+    if not os.path.isfile(letter_file):
+        letter_file = os.path.join(letter_dir, "0.json")
+
+    with open(letter_file) as f:
         return np.array(json.load(f))

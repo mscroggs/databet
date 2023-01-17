@@ -1,3 +1,4 @@
 .*.swp
 pngs/*.png
 *.pyc
+__test*.png
