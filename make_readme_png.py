@@ -11,7 +11,7 @@ plt.rcParams["axes.edgecolor"] = "#333333"
 plt.rcParams["xtick.color"] = "#333333"
 plt.rcParams["ytick.color"] = "#333333"
 
-plt.figure(figsize=(6, 5))
+plt.figure(figsize=(6.2, 5.2))
 for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
     row = i // 5
     col = i % 5
@@ -25,9 +25,11 @@ for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
         plt.plot(col + pts[:, 0], 4 - row + pts[:, 1], "o", color="#2EA3D0", markersize=2)
     else:
         plt.plot(col + pts[:, 0], 4 - row + pts[:, 1], "o", color="#FFA366", markersize=2)
-    plt.xlim([-0.05, 6.05])
-    plt.ylim([-0.05, 5.05])
-    plt.axis("equal")
-plt.savefig("img/all.png", dpi=133)
+plt.plot([-0.05, 6.05, 6.05, -0.05, -0.05], [-0.05, -0.05, 5.05, 5.05, -0.05], "k-")
+plt.xlim([-0.1, 6.1])
+plt.ylim([-0.1, 5.1])
+plt.axis("off")
+plt.gca().set_position((0, 0, 1, 1))
+plt.savefig("img/all.png", dpi=125)
 plt.clf()
 plt.close()
