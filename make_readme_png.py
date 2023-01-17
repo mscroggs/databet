@@ -1,15 +1,5 @@
-import json
-import matplotlib.pylab as plt
-import numpy as np
-import os
-
-if not os.path.isdir("pngs"):
-    os.system("mkdir pngs")
-
-plt.rcParams["font.family"] = "Comfortaa"
-plt.rcParams["axes.edgecolor"] = "#333333"
-plt.rcParams["xtick.color"] = "#333333"
-plt.rcParams["ytick.color"] = "#333333"
+from tools.letters import load_letter
+from tools.plotting import plt
 
 plt.figure(figsize=(6.2, 5.2))
 for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
@@ -18,8 +8,7 @@ for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
     if row == 5:
         row = 4
         col = 5
-    with open(f"letters/{letter}.json") as f:
-        pts = np.array(json.load(f))
+    pts = load_letter(letter)
 
     if i % 2 == 0:
         plt.plot(col + pts[:, 0], 4 - row + pts[:, 1], "o", color="#2EA3D0", markersize=2)
