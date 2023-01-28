@@ -4,6 +4,8 @@ on:
   push:
     tags:
       - 'v*'
+    branches:
+      - main
 
 jobs:
   pypi:
@@ -15,6 +17,7 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: "3.11"
+    - run: python3 -m pip install numpy
     - name: Build a binary wheel and a source tarball
       run: |
         pip install wheel
