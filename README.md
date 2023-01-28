@@ -16,3 +16,11 @@ For each of the datasets (to 2 decimal places):
 The dataset for each letter of the alphabet can be found in JSON format in the [letters](letters) folder.
 
 You can read more about these datasets at [mscroggs.co.uk/blog/101](https://mscroggs.co.uk/blog/101).
+
+## Installing with pip
+If you want to experiment with these datasets using Python, you can install the databet package
+by running:
+
+```bash
+pip install databet
+```
