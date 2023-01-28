@@ -2,14 +2,13 @@
 
 import json
 
-from databet.letters import load_letter_list
-
 
 def make():
     """Make _letters.py."""
     data = {}
     for letter in "0ABCDEFGHIJKLMNOPQRSTUVWXYZ":
-        data[letter] = load_letter_list(letter)
+        with open(f"letters/{letter}.json") as f:
+            data[letter] = json.load(f)
 
     with open("databet/_letters.py", "w") as f:
         f.write("\"\"\"Letters.\"\"\"\n\n")
