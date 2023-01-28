@@ -18,9 +18,15 @@ jobs:
         with:
           python-version: "3.11"
       - uses: actions/checkout@v3
-      - run: python3 -m pip install matplotlib flake8 pytest numpy
+      - run: python3 -m pip install matplotlib flake8 pytest numpy isort mypy pydocstyle
       - run: python3 -m flake8 .
-        name: Run flake8
+        name: Run flake8 checks
+      - run: python3 -m pydocstyle .
+        name: Run pydocstyle checks
+      - run: python3 -m mypy .
+        name: Run mypy checks
+      - run: python3 -m isort --check .
+        name: Run isort checks
       - run: python3 -m pytest test
         name: Run tests
       - run: |

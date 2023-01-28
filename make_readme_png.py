@@ -8,7 +8,7 @@ for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
     if row == 5:
         row = 4
         col = 5
-    pts = load_letter(letter, "numpy")
+    pts = load_letter(letter)
 
     if i % 2 == 0:
         plt.plot(col + pts[:, 0], 4 - row + pts[:, 1], "o", color="#2EA3D0", markersize=2)

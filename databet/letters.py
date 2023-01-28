@@ -1,9 +1,22 @@
+"""Letters."""
+
 import json as _json
-import numpy as _np
 import os as _os
+import typing as _typing
+
+import numpy as _np
+import numpy.typing as _npt
 
 
-def _load(letter):
+def _load(letter: str) -> _typing.List[_typing.List[float]]:
+    """Load data from _letters.py or a JSON file.
+
+    Args:
+        letter: The letter to load
+
+    Returns:
+        The data for the letter in list format
+    """
     try:
         from ._letters import letters
         if letter not in letters:
@@ -19,12 +32,29 @@ def _load(letter):
             return _json.load(f)
 
 
-def load_letter(letter, format="numpy"):
-    data = _load(letter)
+def load_letter(
+    letter: str
+) -> _npt.NDArray[_np.float64]:
+    """Load a letter as a Numpy array.
 
-    if format == "list":
-        return data
-    if format == "numpy":
-        return _np.array(data)
+    Args:
+        letter: The letter to load
 
-    raise ValueError(f"Unknown format: {format}")
+    Returns:
+        The data for the letter
+    """
+    return _np.array(_load(letter))
+
+
+def load_letter_list(
+    letter: str
+) -> _typing.List[_typing.List[float]]:
+    """Load a letter as a list.
+
+    Args:
+        letter: The letter to load
+
+    Returns:
+        The data for the letter
+    """
+    return _load(letter)
