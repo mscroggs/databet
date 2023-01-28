@@ -3,3 +3,6 @@ pngs/*.png
 *.pyc
 __test*.png
 databet/_letters.py
+build/*
+*.egg-info
+dist/*

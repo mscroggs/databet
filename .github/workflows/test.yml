@@ -29,6 +29,13 @@ jobs:
         name: Run isort checks
       - run: python3 -m pytest test
         name: Run tests
+
+      - run: |
+          python3 -m pip install .
+          rm -r databet
+      - run: python3 -m pytest test
+        name: Run tests
+
       - run: |
           python3 make_pngs.py
           python3 make_readme_png.py
