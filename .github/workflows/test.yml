@@ -27,7 +27,9 @@ jobs:
           repository: googlefonts/comfortaa
           ref: main
       - name: Install Comfortaa
-        run: cp comfortaa/fonts/TTF/Comfortaa-Regular.ttf ~/.local/share/fonts/
+        run: |
+            mkdir ~/.local/share/fonts/
+            cp comfortaa/fonts/TTF/Comfortaa-Regular.ttf ~/.local/share/fonts/
 
       - run: python3 -m flake8 .
         name: Run flake8 checks
