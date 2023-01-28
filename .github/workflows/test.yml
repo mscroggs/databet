@@ -19,6 +19,16 @@ jobs:
           python-version: "3.11"
       - uses: actions/checkout@v3
       - run: python3 -m pip install matplotlib flake8 pytest numpy isort mypy pydocstyle
+
+      - name: Clone Comfortaa
+        uses: actions/checkout@v3
+        with:
+          path: ./comfortaa
+          repository: googlefonts/comfortaa
+          ref: main
+      - name: Install Comfortaa
+        run: cp comfortaa/fonts/TTF/Comfortaa-Regular.ttf ~/.local/share/fonts/
+
       - run: python3 -m flake8 .
         name: Run flake8 checks
       - run: python3 -m pydocstyle .
