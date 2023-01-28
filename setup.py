@@ -25,7 +25,7 @@ if __name__ == "__main__":
         description="datasets with the same summary statistics that look like the alphabet",
         long_description=long_description,
         long_description_content_type="text/markdown",
-        version="1970.0.0",
+        version="2023.1.1",
         author="Matthew Scroggs",
         license="MIT",
         author_email="databet@mscroggs.co.uk",
