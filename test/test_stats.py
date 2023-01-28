@@ -1,11 +1,8 @@
-import json
-import numpy as np
 import pytest
-from tools.letters import load_letter
-from tools.stats import mean_x, mean_y, std_x, std_y, correlation
+from databet.letters import load_letter
+from databet.stats import mean_x, mean_y, std_x, std_y, correlation
 
-with open("letters/0.json") as f:
-    zero = np.array(json.load(f))
+zero = load_letter("0")
 
 
 @pytest.mark.parametrize("stat, target", [

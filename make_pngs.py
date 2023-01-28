@@ -1,5 +1,5 @@
 import os
-from tools.plotting import plot_letter
+from databet.plotting import plot_letter
 
 if not os.path.isdir("pngs"):
     os.system("mkdir pngs")

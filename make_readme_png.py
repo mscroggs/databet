@@ -1,5 +1,5 @@
-from tools.letters import load_letter
-from tools.plotting import plt, plot_letter
+from databet.letters import load_letter
+from databet.plotting import plt, plot_letter
 
 plt.figure(figsize=(6.2, 5.2))
 for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
@@ -8,7 +8,7 @@ for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
     if row == 5:
         row = 4
         col = 5
-    pts = load_letter(letter)
+    pts = load_letter(letter, "numpy")
 
     if i % 2 == 0:
         plt.plot(col + pts[:, 0], 4 - row + pts[:, 1], "o", color="#2EA3D0", markersize=2)

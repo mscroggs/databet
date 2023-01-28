@@ -1,5 +1,5 @@
 import pytest
-from tools.plotting import plot_letter, plot_word
+from databet.plotting import plot_letter, plot_word
 
 
 @pytest.mark.parametrize("letter", "ABCabc")
