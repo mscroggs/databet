@@ -1,4 +1,7 @@
+"""Script to plot every letter."""
+
 import os
+
 from databet.plotting import plot_letter
 
 if not os.path.isdir("pngs"):

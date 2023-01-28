@@ -1,6 +1,5 @@
 """Script to increase the version number."""
 
-import json
 from datetime import datetime
 
 # Calculate new version number

@@ -1,4 +1,5 @@
 import pytest
+
 from databet.plotting import plot_letter, plot_word
 
 

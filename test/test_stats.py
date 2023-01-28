@@ -1,6 +1,7 @@
 import pytest
+
 from databet.letters import load_letter
-from databet.stats import mean_x, mean_y, std_x, std_y, correlation
+from databet.stats import correlation, mean_x, mean_y, std_x, std_y
 
 zero = load_letter("0")
 

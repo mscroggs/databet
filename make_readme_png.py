@@ -1,5 +1,7 @@
+"""Script to plot images for README file."""
+
 from databet.letters import load_letter
-from databet.plotting import plt, plot_letter
+from databet.plotting import plot_letter, plt
 
 plt.figure(figsize=(6.2, 5.2))
 for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
