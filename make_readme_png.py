@@ -1,5 +1,5 @@
 from tools.letters import load_letter
-from tools.plotting import plt
+from tools.plotting import plt, plot_letter
 
 plt.figure(figsize=(6.2, 5.2))
 for i, letter in enumerate("ABCDEFGHIJKLMNOPQRSTUVWXYZ"):
@@ -22,3 +22,5 @@ plt.gca().set_position((0, 0, 1, 1))
 plt.savefig("img/all.png", dpi=125)
 plt.clf()
 plt.close()
+
+plot_letter("0", "img/star.png")
