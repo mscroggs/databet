@@ -13,4 +13,6 @@ For each of the datasets (to 2 decimal places):
 - The standard deviation of the y-values is 0.18
 - The correlation coefficient is 0.16
 
+The dataset for each letter of the alphabet can be found in JSON format in the [letters](letters) folder.
+
 You can read more about these datasets at [mscroggs.co.uk/blog/101](https://mscroggs.co.uk/blog/101).

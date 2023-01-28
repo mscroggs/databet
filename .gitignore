@@ -2,3 +2,4 @@
 pngs/*.png
 *.pyc
 __test*.png
+databet/_letters.py
