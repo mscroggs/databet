@@ -1,7 +1,7 @@
 # The databet
 ![The alphabet](img/all.png)
 
-This repo contains 27 datasets: 26 of these resemble the letters of the alphabet, the 27th is a star:
+The databet contains 27 datasets: 26 of these resemble the letters of the alphabet, the 27th is a star:
 
 ![The starting dataset](img/star.png)
 
@@ -26,7 +26,7 @@ by running:
 pip install databet
 ```
 
-Alternatively, you can install databet directly from this repo by running:
+Alternatively, you can install databet directly from the databet GitHub repo by running:
 
 ```bash
 pip install git+https://github.com/mscroggs/databet
