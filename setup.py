@@ -13,12 +13,11 @@ if sys.version_info < (3, 6):
 
 make_letters.make()
 with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "README.md")) as f:
-    long_description = f.read().replace(
-        "(img/",
-        "(https://raw.githubusercontent.com/mscroggs/databet/main/img/")
+    long_description = "\n\n".join([
+        paragraph for paragraph in f.read().replace(
+            "(img/", "(https://raw.githubusercontent.com/mscroggs/databet/main/img/"
+        ).split("\n\n") if "[letters](letters)" not in paragraph])
 
-
-data_files = ["LICENSE", "README.md"]
 
 if __name__ == "__main__":
     setuptools.setup(
@@ -34,7 +33,5 @@ if __name__ == "__main__":
         url="https://github.com/mscroggs/databet",
         packages=["databet"],
         package_data={"databet": ["py.typed"]},
-        include_package_data=True,
-        data_files=data_files,
         install_requires=["numpy", "matplotlib"],
     )
