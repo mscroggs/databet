@@ -16,7 +16,7 @@ with open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "README.md")
     long_description = "\n\n".join([
         paragraph for paragraph in f.read().replace(
             "(img/", "(https://raw.githubusercontent.com/mscroggs/databet/main/img/"
-        ).split("\n\n") if "[letters](letters)" not in paragraph])
+        ).split("\n\n") if "[letters](letters)" not in paragraph and "[font](font)" not in paragraph])
 
 
 if __name__ == "__main__":

@@ -17,6 +17,11 @@ The dataset for each letter of the alphabet can be found in JSON format in the [
 
 You can read more about these datasets at [mscroggs.co.uk/blog/101](https://mscroggs.co.uk/blog/101).
 
+## Databet Sans font
+If you want to use the databet in a document you are writing, you can install the Databet Sans font.
+TTF, EOT and SVG fonts can be found in the [font](font) folder. These fonts are available under an
+SIL Open Font License.
+
 ## Databet Python package
 ### Installing with pip
 If you want to experiment with these datasets using Python, you can install the databet package
